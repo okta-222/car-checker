@@ -1,0 +1,193 @@
+code
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+
+    <!-- Swiper -->
+    <!-- <div class="swiper mySwiper">
+        <div9 class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/1.jpg" alt="..."></div>
+            <div class="swiper-slide"><img src="images/2.jpg" alt="..."></div>
+            <div class="swiper-slide"><img src="images/1.jpg" alt="..."></div>
+            <div class="swiper-slide"><img src="images/1.jpg" alt="..."></div>
+            <div class="swiper-slide"><img src="images/9.jpg" alt="..."></div>
+            <div class="swiper-slide"><img src="images/2.jpg" alt="..."></div>
+            <div class="swiper-slide"><img src="images/1.jpg" alt="..."></div>
+            <div class="swiper-slide"><img src="images/2.jpg" alt="..."></div>
+            <div class="swiper-slide"><img src="images/9.jpg" alt="..."></div>
+        </div>
+        <div class="but-box">
+        <div class="next"><i class="fa-solid fa-forward-fast"></i></div>
+        <div class="prev"><i class="fa-solid fa-backward-fast"></i></div>
+        <div class="swiper-pagination"></div>
+        </div>
+        </div> -->
+
+
+
+            <!-- Swiper -->
+        
+            <div #swiperRef="" class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/1.jpg" alt="..."></div>
+                    <div class="swiper-slide"><img src="images/2.jpg" alt="..."></div>
+                    <div class="swiper-slide"><img src="images/9.jpg" alt="..."></div>
+                    <div class="swiper-slide"><img src="images/1.jpg" alt="..."></div>
+                    <div class="swiper-slide"><img src="images/9.jpg" alt="..."></div>
+                    <div class="swiper-slide"><img src="images/1.jpg" alt="..."></div>
+                </div>
+            </div>
+
+            <!--  -->
+            <div class="button-box">
+                        <div class="button-prev"><i class="fa-solid fa-backward-fast"></i></div>
+                        <div class="button-next"><i class="fa-solid fa-forward-fast"></i></div>
+            </div>
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Swiper JS -->
+        <script src="js/jquery.js"></script>
+        <script src="js/all.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        
+        <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            centeredSlides: true,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".button-next",
+                prevEl: ".button-prev",
+            },
+        });
+
+    </script>
+        </body>
+        
+        </html>
+        <!-- css -->
+
+
+                html,
+                body {
+                position: relative;
+                height: 100%;
+                }
+                
+                body {
+                background: #eee;
+                font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+                font-size: 14px;
+                color: #000;
+                margin: 0;
+                padding: 0;
+                }
+                
+                .swiper {
+                width: 40%;
+                height: 50%;
+                margin-bottom: 50px;
+                }
+                
+                .swiper-slide {
+                text-align: center;
+                font-size: 18px;
+                background: #fff;
+                
+                /* Center slide text vertically */
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                align-items: center;
+                }
+                
+                .swiper-slide img {
+                display: block;
+                width: 100%;
+                height: 80%;
+                /* object-fit: cover; */
+                
+                }
+                
+                .swiper {
+                width: 80%;
+                height: 300px;
+                margin: 20px auto;
+                margin-bottom: 100px;
+                }
+                
+                /* button next, prev */
+                .button-box {
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                }
+                .button-next,
+                .button-prev {
+                cursor: pointer;
+                font-size: 22px;
+                margin: 0 20px;
+                }

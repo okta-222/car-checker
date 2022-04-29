@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Car Checker !</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link href="/js/jquery.exzoom.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .imgBox .hidden-item img {
+            width: 300px;
+            height: 300px;
+        }
+
+        .tracker {
+            width: 300px !important;
+            height: 300px !important;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+
+    <!-- start select -->
+    <div class="basic-container">
+
+
+
+        <div class="the-selection">
+
+            <!-- button -->
+            <button class="one"> بدء التصحيح</button>
+
+            <!-- side -->
+            <select name="choose" id="select-side">
+                <option>الرجاء اختيار الجانب</option>
+                <option> الجانب الايمن</option>
+                <option> الجانب الايسر</option>
+            </select>
+
+            <!-- number -->
+            <select name="choose" id="select-number">
+                <option>الرجاء اختيار رقم السياره</option>
+            </select>
+        </div>
+
+        <!-- end select -->
+
+        <div class="containerr mt-5 w-25">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" id="hi">اثبات
+                مشكله</button>
+            <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Contact Us</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label class="form-label required">Name</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label required">Email</label>
+                                    <input type="email" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label required">Type ypur message here</label>
+                                    <textarea class="form-control"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-danger">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- top imgBox -->
+
+        <div class="imgBox">
+            <div class="hidden-item">
+                <img src="images/5.jpg" alt="..." height="300px" class="box target imgLeft" id="img"
+                    data-zoom-image="images/5.jpg">
+            </div>
+             <div class="hidden-item ">
+                <img src="images/4.jpg" alt="..." class="imgRight" id="image"
+                data-zoom-image="images/4.jpg">
+            </div>
+        </div>
+
+        <!-- Swiper -->
+
+        <div #swiperRef="" class="swiper mySwiper sliderr" data-bs-ride="carousel">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="images/1.jpg" target="imgBox"><img src="images/1.jpg" alt="..."></a>
+                </div>
+                <div class="swiper-slide"><a href="images/2.jpg" target="imgBox"><img src="images/2.jpg" alt="..."></a>
+                </div>
+                <div class="swiper-slide"><a href="images/9.jpg" target="imgBox"><img src="images/9.jpg" alt="..."></a>
+                </div>
+                <div class="swiper-slide"><a href="images/1.jpg" target="imgBox"><img src="images/1.jpg" alt="..."></a>
+                </div>
+                <div class="swiper-slide"><a href="images/9.jpg" target="imgBox"><img src="images/9.jpg" alt="..."></a>
+                </div>
+                <div class="swiper-slide"><a href="images/1.jpg" target="imgBox"><img src="images/1.jpg" alt="..."></a>
+                </div>
+                <div class="swiper-slide"><a href="images/9.jpg" target="imgBox"><img src="images/9.jpg" alt="..."></a>
+                </div>
+                <div class="swiper-slide"><a href="images/1.jpg" target="imgBox"><img src="images/1.jpg" alt="..."></a>
+                </div>
+                <div class="swiper-slide"><a href="images/9.jpg" target="imgBox"><img src="images/9.jpg" alt="..."></a>
+                </div>
+                <div class="swiper-slide"><a href="images/2.jpg" target="imgBox"><img src="images/2.jpg" alt="..."></a>
+                </div>
+            </div>
+        </div>
+
+        <!--  -->
+        <div class="button-box">
+            <a class="btn zoom-init"><i class="fa-solid fa-repeat"></i></a>
+            <button class="btn le" id="btnLeft"><i class="fas fa-undo"></i></button>
+            <button class="btn re" id="btnRight"><i class="fas fa-redo"></i></button>
+            <a class="btn zoom-out"><i class="fas fa-search-minus"></i></a>
+            <a class="btn zoom"><i class="fas fa-search-plus"></i></a>
+            <div class="button-prev"><i class="fa-solid fa-backward-fast"></i></div>
+            <div class="button-next"><i class="fa-solid fa-forward-fast"></i></div>
+        </div>
+        <div class="button-box-two">
+            <button class=" bltwo" id="bltwoSec"><i class="fas fa-undo"></i></button>
+            <button class=" brtwo" id="brtwoSec"><i class="fas fa-redo"></i></button>
+            <a class=" bzo"><i class="fas fa-search-minus"></i></a>
+            <a class=" bz"><i class="fas fa-search-plus"></i></a>
+            <a class=" bzi"><i class="fa-solid fa-repeat"></i></a>
+        </div>
+
+        <!-- the boxes -->
+        <div class="container">
+            <div class="box-checker error">
+                <p>تم التصحيح وتوجد مشكله</p>
+                <a href="images/1.jpg" target="imgBox"><img src="images/1.jpg" alt="..."></a>
+            </div>
+            <div class="box-checker error ">
+                <p>تم التصحيح وتوجد مشكله</p>
+                <a href="images/2.jpg" target="imgBox"><img src="images/2.jpg" alt="..."></a>
+            </div>
+            <div class="box-checker">
+                <p>لم يتم التصحيح يعد</p>
+                <a href="images/9.jpg" target="imgBox"><img src="images/9.jpg" alt="..."></a>
+            </div>
+            <div class="box-checker">
+                <p>لم يتم التصحيح يعد</p>
+                <a href="images/1.jpg" target="imgBox"><img src="images/1.jpg" alt="..."></a>
+            </div>
+            <div class="box-checker">
+                <p>لم يتم التصحيح يعد</p>
+                <a href="images/9.jpg" target="imgBox"><img src="images/9.jpg" alt="..."></a>
+            </div>
+            <div class="box-checker done">
+                <p>تم التصحيح ولا توجد مشاكل </p>
+                <a href="images/1.jpg" target="imgBox"><img src="images/1.jpg" alt="..."></a>
+            </div>
+            <div class="box-checker done">
+                <p>تم التصحيح ولا توجد مشاكل </p>
+                <a href="images/9.jpg" target="imgBox"><img src="images/9.jpg" alt="..."></a>
+            </div>
+            <div class="box-checker done">
+                <p>تم التصحيح ولا توجد مشاكل </p>
+                <a href="images/1.jpg" target="imgBox"><img src="images/1.jpg" alt="..."></a>
+            </div>
+            <div class="box-checker done">
+                <p>تم التصحيح ولا توجد مشاكل </p>
+                <a href="images/9.jpg" target="imgBox"><img src="images/9.jpg" alt="..."></a>
+            </div>
+            <div class="box-checker done">
+                <p>تم التصحيح ولا توجد مشاكل </p>
+                <a href="images/2.jpg" target="imgBox"><img src="images/2.jpg" alt="..."></a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-zoom/1.6.1/jquery.zoom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/controll.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="js/zoomsl.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script type="text/javascript">
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 4,
+            centeredSlides: true,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".button-next",
+                prevEl: ".button-prev",
+            },
+        });
+        //
+
+        $("#img").imagezoomsl({
+            zoomrange: [3, 3]
+        });
+
+        // 
+
+        $("#image").imagezoomsl({
+                zoomrange: [3, 3]
+            });
+    </script>
+
+</body>
+
+</html>
